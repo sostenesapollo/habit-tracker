@@ -341,7 +341,7 @@ export function HabitGrid({ habit, view }: HabitGridProps) {
           <div style={{ display: 'inline-block', minWidth: 'fit-content' }}>
             {/* Month labels row - only for annual/semester */}
             {view !== 'weekly' && (
-              <div style={{ display: 'flex', gap: '1px', marginBottom: '2px', paddingLeft: '16px' }}>
+              <div style={{ display: 'flex', gap: '1px', marginBottom: '2px', paddingLeft: '20px' }}>
                 {weeks.map((_, weekIndex) => {
                   const { month, show } = getMonthForWeek(weekIndex);
                   return (
@@ -349,6 +349,7 @@ export function HabitGrid({ habit, view }: HabitGridProps) {
                       key={weekIndex}
                       style={{
                         width: '10px',
+                        minWidth: '10px',
                         height: '16px',
                         display: 'flex',
                         alignItems: 'flex-start',
@@ -366,7 +367,7 @@ export function HabitGrid({ habit, view }: HabitGridProps) {
             )}
 
             {/* Grid: rows = days of week, columns = weeks */}
-            <div style={{ display: 'flex', gap: '1px' }}>
+            <div style={{ display: 'flex', gap: '1px', alignItems: 'flex-start' }}>
               {/* Day labels column - only for annual/semester */}
               {view !== 'weekly' && (
                 <div
@@ -376,9 +377,9 @@ export function HabitGrid({ habit, view }: HabitGridProps) {
                     gap: '1px',
                     marginRight: '4px',
                     flexShrink: 0,
+                    marginTop: '16px',
                   }}
                 >
-                  <div style={{ height: '16px' }} />
                   {dayLabels.map((label, dayIndex) => {
                     return (
                       <div
@@ -387,6 +388,7 @@ export function HabitGrid({ habit, view }: HabitGridProps) {
                           width: '16px',
                           height: '10px',
                           minHeight: '10px',
+                          maxHeight: '10px',
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'flex-end',
@@ -394,6 +396,7 @@ export function HabitGrid({ habit, view }: HabitGridProps) {
                           color: 'var(--text-secondary)',
                           fontWeight: '500',
                           paddingRight: '4px',
+                          lineHeight: '1',
                         }}
                       >
                         {label}
@@ -404,7 +407,7 @@ export function HabitGrid({ habit, view }: HabitGridProps) {
               )}
 
               {/* Grid content */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1px', marginTop: view !== 'weekly' ? '16px' : '0' }}>
                 {view === 'weekly' ? (
                   <>
                     {/* Day labels row for weekly view */}
@@ -485,6 +488,7 @@ export function HabitGrid({ habit, view }: HabitGridProps) {
                                   height: '10px',
                                   minWidth: '10px',
                                   minHeight: '10px',
+                                  maxHeight: '10px',
                                 }}
                               />
                             );
