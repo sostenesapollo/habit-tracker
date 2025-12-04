@@ -16,7 +16,7 @@
   --danger-hover: #dc2626;
   --grid-bg: #ebedf0;
   --grid-bg-empty: #ebedf0;
-  --grid-border: rgba(0, 0, 0, 0.08);
+  --grid-border: rgba(0, 0, 0, 0.15);
 }
 
 .dark {
@@ -27,7 +27,7 @@
   --border: #30363d;
   --grid-bg: #21262d;
   --grid-bg-empty: #161b22;
-  --grid-border: rgba(255, 255, 255, 0.08);
+  --grid-border: rgba(255, 255, 255, 0.15);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,7 +39,7 @@
     --border: #30363d;
     --grid-bg: #21262d;
     --grid-bg-empty: #161b22;
-    --grid-border: rgba(255, 255, 255, 0.05);
+    --grid-border: rgba(255, 255, 255, 0.15);
   }
 }
 

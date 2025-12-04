@@ -176,7 +176,7 @@ export function HabitGrid({ habit, view }: HabitGridProps) {
       minWidth: size,
       minHeight: size,
       backgroundColor,
-      opacity: isFuture ? 0.3 : intensity === 0 ? 0.1 : intensity === 1 ? 0.4 : intensity === 2 ? 0.6 : intensity === 3 ? 0.8 : 1,
+      opacity: isFuture ? 0.3 : intensity === 0 ? 0.2 : intensity === 1 ? 0.5 : intensity === 2 ? 0.7 : intensity === 3 ? 0.85 : 1,
       borderRadius,
       cursor: isFuture ? 'not-allowed' : 'pointer',
       border: isToday
