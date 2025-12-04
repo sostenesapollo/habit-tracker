@@ -179,7 +179,9 @@ export function HabitGrid({ habit, view }: HabitGridProps) {
       opacity: isFuture ? 0.3 : intensity === 0 ? 0.1 : intensity === 1 ? 0.4 : intensity === 2 ? 0.6 : intensity === 3 ? 0.8 : 1,
       borderRadius,
       cursor: isFuture ? 'not-allowed' : 'pointer',
-      border: isToday ? '2px solid var(--accent)' : 'none',
+      border: isToday
+        ? '2px solid var(--accent)'
+        : '1px solid var(--grid-border)',
       transition: 'all 0.15s ease',
       outline: 'none',
     };
