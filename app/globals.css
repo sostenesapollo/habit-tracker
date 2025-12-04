@@ -1,22 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Default to dark mode */
 :root {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f9fafb;
-  --text-primary: #111827;
-  --text-secondary: #6b7280;
-  --border: #e5e7eb;
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --text-primary: #c9d1d9;
+  --text-secondary: #8b949e;
+  --border: #30363d;
   --accent: #10b981;
   --accent-hover: #059669;
   --danger: #ef4444;
   --danger-hover: #dc2626;
-  --grid-bg: #ebedf0;
-  --grid-bg-empty: #ebedf0;
-  --grid-border: rgba(0, 0, 0, 0.15);
+  --grid-bg: #21262d;
+  --grid-bg-empty: #161b22;
+  --grid-border: rgba(255, 255, 255, 0.15);
 }
 
 .dark {
@@ -30,21 +33,20 @@
   --grid-border: rgba(255, 255, 255, 0.15);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not(.light) {
-    --bg-primary: #0d1117;
-    --bg-secondary: #161b22;
-    --text-primary: #c9d1d9;
-    --text-secondary: #8b949e;
-    --border: #30363d;
-    --grid-bg: #21262d;
-    --grid-bg-empty: #161b22;
-    --grid-border: rgba(255, 255, 255, 0.15);
-  }
+/* Light mode when explicitly set */
+:root.light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --border: #e5e7eb;
+  --grid-bg: #ebedf0;
+  --grid-bg-empty: #ebedf0;
+  --grid-border: rgba(0, 0, 0, 0.15);
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -53,6 +55,7 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   min-height: 100vh;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 }
 
 .container {
